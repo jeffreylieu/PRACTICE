@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reversehalfofstring</title>
+    <script type="text/javascript">
+        var forward = '';
+        var backward = '';
+        var string = 'it was such a good time';
+
+        for(var firstHalf = 0; firstHalf < Math.floor(string.length/2); firstHalf++) {
+            forward = forward + string[firstHalf];
+
+        }
+        for(var secondHalf = string.length - 1; secondHalf >= Math.floor(string.length/2); secondHalf--){
+            backward = backward + string[secondHalf];
+        }
+        var outPut = forward + " " + backward;
+        console.log (outPut);
+    </script>
+</head>
+<body>
+
+</body>
+</html>

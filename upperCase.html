@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UpperCase</title>
+</head>
+<body>
+    <script>
+        // alternate caps
+        // given a string, create a new string with every other letter capitalized
+        // example:
+        // parameters: "amazing"
+        // return: "aMaZiNg" ----- use .uppercase
+
+        // human-level instructions
+        // create variable to store new string
+        // start a loop to proceed through the string
+        // get a new letter from the string
+        // store it in a variable
+
+        // get the next letter from the string
+        // store it in a variable
+
+        // capitalize it
+        // add the regular and capitalized letters to the new string
+        // repeat
+
+        function upperCase(string){
+            var newString = "";
+            for(var i = 0; i < string.length; i++){
+                if(i % 2 === 1){
+                    newString += string.substring(i, i + 1).toUpperCase();
+                } else {
+                    newString += string.substring(i, i + 1);
+                }
+            }
+            return newString;
+        }
+        console.log(upperCase('amazing'));
+
+    </script>
+</body>
+</html>

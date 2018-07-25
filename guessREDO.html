@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script type="text/javascript"></script>
+    <title>NewGuess</title>
+</head>
+
+<body background="http://www.adwonline.ae/wp-content/uploads/2017/04/space-005.jpg">
+
+
+<h1>Pick the right number to stop Thanos!!</h1>
+<div class="thanos"><img src="https://media.giphy.com/media/X7Z4lDnPqcF0dyY2dX/giphy.gif"></div>
+<div class="containerInput">
+    <input id="guess_input" size="35">
+    <div id="response_div">
+
+    </div>
+
+</div>
+<div class="container">
+    <div class="stoneContainer">
+        <div class="imageContainer">
+            <img class="stoneSize" src="https://imgur.com/ZRaGMoF.jpg">
+        </div>
+        <div class="stoneRow">
+            <button id="guessSpace">Space</button>
+        </div>
+    </div>
+
+    <div class="stoneContainer">
+        <img class="stoneSize" src="https://imgur.com/vXCaJzW.jpg">
+        <div class="stoneRow">
+            <button id="guessMind">Mind</button>
+        </div>
+    </div>
+
+    <div class="stoneContainer">
+        <img class="stoneSize" src="https://imgur.com/MV8ovOm.jpg">
+        <div class="stoneRow">
+            <button id="guessRealty">Reality</button>
+        </div>
+    </div>
+
+    <div class="stoneContainer">
+        <img class="stoneSize" src="https://imgur.com/C9paCay.jpg">
+        <div class="stoneRow">
+            <button id="guessPower">Power</button>
+        </div>
+    </div>
+
+    <div class="stoneContainer">
+        <img class="stoneSize" src="https://imgur.com/dywwQ56.jpg">
+        <div class="stoneRow">
+            <button id="guessTime">Time</button>
+        </div>
+    </div>
+
+    <div class="stoneContainer">
+        <img class="stoneSize" src="https://imgur.com/D3EqNbU.jpg">
+        <div class="stoneRow">
+            <button id="guessSoul">Soul</button>
+        </div>
+    </div>
+
+</div> <!--end of main container-->
+
+<script>// https://media.giphy.com/media/X7Z4lDnPqcF0dyY2dX/giphy.gif
+//to make button store text on button when clicked ie var stone name, $(this).text(); use on click then button name
+var the_number = null;
+$(document).ready(function() {
+    the_number = pick_number()
+});
+
+
+function pick_number(){
+    var random_number;
+    random_number = Math.floor((Math.random() * 10) + 1);
+    return random_number;
+}
+pick_number();
+
+$('button').click(make_guess);
+// $('button').click(make_guess);
+// $('button').click(make_guess);
+// $('button').click(make_guess);
+// $('button').click(make_guess);
+// $('button').click(make_guess);
+
+
+function make_guess(){
+    var the_guess = $('#guess_input').val();
+    $('#response_div').css('color', 'yellow');
+
+    if(the_guess > the_number){
+        $('#response_div').html("He's coming!!");
+    } else if(the_guess < the_number){
+        $('#response_div').html("Your safe for now!");
+    } else{
+        $('#response_div').html("Too bad...")
+        $('.thanos').show('slow');/// put surprise image here
+    }
+}
+
+
+
+</script>
+</body>
+</html>

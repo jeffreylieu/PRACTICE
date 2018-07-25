@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Find Middle letter example</title>
+</head>
+<body>
+<script>
+    //*find middle of string
+    // Build a function, find_middle_letters, that finds the middle of a string.
+    // If the string is an odd number of characters, it returns 1 letter.
+    // If it is an even number of characters, it returns 2 characters. It takes a string as a parameter
+    // Example:
+    // find_middle_letters('seven')
+    // Return: 'v'
+    // find_middle_letters('dish')
+    // Return: 'is'
+
+    // figure out if odd or even
+    // *****REMEMBER..... EVEN Iis represented as  0, ODD is represented as 1 *****
+    // find middle point in string
+    // return new variable with 1 or 2 letters
+    function find_middle_letters(string){
+        var middleLetters  = " ";
+        var midPoint = Math.floor(string.length/2); //* (string.length/2) is the middle index or second of middle, picks middle letter or letters
+            if (string.length % 2 === 1){ //* if string.length has a reminder here its odd
+                middleLetters = string[midPoint]; //* this is saying if odd, do this
+            } else { // else it is even if previous code doesnt determine it is odd
+                middleLetters = string[midPoint - 1] + string[midPoint]; //* if even, do this (which pulls middle 2 letters
+            }
+            return middleLetters;
+    }
+    console.log(find_middle_letters("seven"));
+    console.log(find_middle_letters("dish"));
+
+</script>
+</body>
+</html>

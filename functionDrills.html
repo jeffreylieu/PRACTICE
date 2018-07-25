@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+</head>
+<body>
+<script>
+    var num1 = 5;
+    var num2 = 12;
+    var num3 = -4;
+    var num4 = 0;
+    var string1 = 'hello';
+    var string2 = 'bye';
+    var string3 = '52';
+
+    //TO TEST YOUR CODE: open the JSBIN CONSOLE and click "RUN"
+    //EXAMPLE: create a function that takes a parameter, num3, and returns that parameter
+    function qExample(num3){
+        return num3;
+    }
+
+    //create function that takes in one parameter, a number, and returns that number multiplied by -1;
+
+    function q1(someNum){
+        return someNum * -1;
+    }
+
+    //create a function that takes in 2 numbers, adds them together, and returns the result
+
+    function q2(num1, num2){
+        return num1 + num2;
+    }
+
+    //create a function that takes in a number.  If it is greater or equal to 0, return the boolean true.  If it is less than 0, return the boolean false
+
+    function q3(num1){
+        if (num1 >= 0){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //create a function that takes a string parameter.  It sets the div that has ID q4_answer to have the text equal to the string.  It has no return value.
+
+    function q4(string1){
+        $('#q4_answer').text(string1);
+    }
+
+    //create a function that takes a string parameter. It concatenantes the string literal "hello " (note the space) NOT THE VARIABLE, to the beginning of the string parameter.
+    //it then sets the div with class q5_answer to have text equal to the concatenated string.  It also returns that concatenated string
+
+    function q5(string1){
+        string1 = 'hello '+ string1;
+        $('.q5_answer').text(string1);
+        return string1;
+
+
+    }
+
+    //create a funtion that takes 3 number parameters.  It multiplies the first 2 numbers, and divides that result by the 3rd number.  It returns the result
+    function q6(num1, num2, num3){
+        var result = (num1 * num2)/ num3;
+        return result;
+    }
+
+    //create a function that takes in 2 strings.  It contatenates the 2 strings together with a SPACE between them.  It returns the result
+    function q7(string1, string2){
+        var string = string1 + " " + string2;
+        return string;
+    }
+
+    //create a function that takes in 2 strings.  If the first string is longer than the second, it returns true.  If the second string is longer, it returns false;
+
+    function q8(string1, string2){
+        if (string1 > string2){
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    //create a function takes in an unknown parameter.  If the parameter is a string datatype, it returns false.  If it is a number datatype, it returns true.
+
+    function q9(input){
+        if(typeof input === 'string'){
+            return false;
+        } else {
+            return true;
+        }
+
+
+    }
+
+    //create a function that takes in an unknown parameter.
+    //If it is a number, return the number.
+    //If it is a number in a string, parse it and return the number (check out isNaN()).
+    //If it is string that is not a number, return false
+
+    function q10(input){
+        if(typeof input === 'number'){
+            return input;
+        } else if(!isNaN(input)){
+            return parseInt(input);
+        } else {
+            return false;
+        }
+    }
+
+
+
+    //END OF CODE YOU NEED TO WORK ON//
+
+
+
+    function testValues(num1, num2, num3, num4, string1, string2, string3){
+        var answer_keys = {
+            'q1':[
+                {
+                    'parameters': [num3],
+                    'result': 4
+                },
+                {
+                    'parameters': [num1],
+                    'result': -5
+                },
+            ],
+            'q2':[
+                {
+                    'parameters': [num1,num2],
+                    'result': 17
+                },
+                {
+                    'parameters': [num3,num4],
+                    'result': -4
+                },
+            ],
+            'q3':[
+                {
+                    'parameters': [num1],
+                    'result': true
+                },
+                {
+                    'parameters': [num3],
+                    'result': false
+                },
+            ],
+            'q4':[
+                {
+                    'parameters': [string1],
+                    'result': undefined,
+                    'check': {key:"$('#q4_answer').text()", value: 'hello'}
+                },
+                {
+                    'parameters': [string2],
+                    'result': undefined,
+                    'check': {key:"$('#q4_answer').text()", value: 'bye'}
+                },
+            ],
+            'q5':[
+                {
+                    'parameters': [string1],
+                    'result': 'hello hello',
+                    'check': {key:"$('.q5_answer').text()", value: 'hello hello'}
+                },
+                {
+                    'parameters': [string2],
+                    'result': 'hello bye',
+                    'check': {key:"$('.q5_answer').text()", value: 'hello bye'}
+                },
+            ],
+            'q6':[
+                {
+                    'parameters': [num1,num2,num3],
+                    'result': -15
+                },
+                {
+                    'parameters': [num3,num1,num2],
+                    'result': -1.6666666666666667
+                },
+            ],
+            'q7':[
+                {
+                    'parameters': [string1,string2],
+                    'result': 'hello bye'
+                },
+                {
+                    'parameters': [string1,string3],
+                    'result': 'hello 52'
+                },
+            ],
+            'q8':[
+                {
+                    'parameters': [string2, string1],
+                    'result': false
+                },
+                {
+                    'parameters': [string2, string3],
+                    'result': true
+                },
+            ],
+            'q9':[
+                {
+                    'parameters': [string3],
+                    'result': false
+                },
+                {
+                    'parameters': [num2],
+                    'result': true
+                },
+            ],
+            'q10':[
+                {
+                    'parameters': [num3],
+                    'result': -4
+                },
+                {
+                    'parameters': [string3],
+                    'result': 52
+                },
+                {
+                    'parameters': [string2],
+                    'result': false
+                },
+            ],
+        };
+        for(var i=1; i<=10; i++){
+
+            var q_id = 'q'+i;
+            var answer_set = answer_keys[q_id];
+            for(var pass=0; pass<answer_set.length; pass++){
+                var answer = answer_set[pass];
+                var params = answer.parameters;
+                var func = window[q_id];
+                if(typeof func){
+                    var result =func.apply(null, params);
+                    var correct_result = answer.result;
+                    console.log('#=============Question '+i+ '=============#');
+                    console.log('#-------------Q'+i+' test '+(pass+1)+'---------------#');
+                    if(result===correct_result){
+                        console.log('---params: '+params,
+                            '---result: '+result,
+                            '---CORRECT');
+                    } else{
+                        console.error('---params: '+params);
+                        console.error('---your result: '+result);
+                        console.error('---correct result: '+correct_result);
+                        console.error('---INCORRECT');
+                    }
+                    if(typeof answer.check != 'undefined'){
+                        var target_answer = eval(answer.check.key);
+                        if(target_answer==answer.check.value){
+                            console.log('---Task: successful');
+                            console.log(answer.check.key + " is '"+answer.check.value+"'");
+                        }
+                        else{
+                            console.error('---Task: failure');
+                            console.error(answer.check.key + " should be  '"+answer.check.value + "' but is '"+target_answer+"'");
+                        }
+                    }
+                }
+                else{
+                    console.error('---question'+q_id,
+                        '------ not defined');
+                }
+            }//end of pass for loop
+        }//end of q for loop
+    }
+    testValues(num1, num2, num3, num4, string1, string2, string3);
+</script>
+</body>
+</html>

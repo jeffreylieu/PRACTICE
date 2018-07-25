@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function doStuff(number, opString){
+
+        var equation = (number + opString + number);
+        var total ;
+        if(opString === '+'){
+            total = number + number;
+        } else if (opString === '-'){
+            total = number - number;
+        } else if (opString === '*' || opString === 'X' || opString === 'x'){
+            total = number * number;
+        } else if (opString === '/'){
+            total = number / number;
+        }
+
+        var final = equation + ' make it equal to ' +total;
+        return final;
+    }
+    console.log(doStuff(2, '-')); //make it equal 4
+    console.log(doStuff(3, '+')); //make it equal 6
+
+    // how to make it change operator when the string changes??
+</script>
+</body>
+</html>

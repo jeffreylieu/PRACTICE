@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RANDOMRANGE</title>
+</head>
+<body>
+<script>
+    function randomRange(startNum, endNum){
+        var difference = (endNum - startNum) + 1; //* why add 1 here?
+        var output = Math.floor(Math.random() * difference) + startNum; //* chooses random number
+        return output;
+
+
+    }
+    console.log(randomRange(12,30));
+
+    //build function, called random range
+    //takes in startNum & endNum
+    //choose number at random
+    //and then return it
+    //look up Math.floor and Math.random to finish practice...
+
+</script>
+</body>
+</html>

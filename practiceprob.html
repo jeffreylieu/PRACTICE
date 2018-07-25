@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+
+        let test = "6/1/2018"
+
+        function weekLayout( inputDayStr ){
+            debugger;
+            let weekObj = {};
+            let dayOfWeek = new Date(inputDayStr).getDay();
+
+            for ( let dayIndex = -dayOfWeek; dayIndex < 7-dayOfWeek; dayIndex++){
+                let nextDay = new Date(inputDayStr); //gets current day
+                nextDay.setDate(nextDay.getDate() + dayIndex); //adds or minus days then gets the adjusted object.
+
+                let day = nextDay.toString().split(' ')[0]; // pulls the day str
+                let key = day[0]; //sets key by day
+                if (weekObj[key]){
+                    key = day.substr(0,2);
+                }
+                weekObj[key] = nextDay.toLocaleDateString();
+            }
+            return weekObj;
+        }
+
+        let result = weekLayout(test);
+        console.log(result);
+
+
+    </script>
+    <title>Title</title>
+</head>
+
+<body>
+<style>
+
+</style>
+</body>
+</html>

@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+
+
+<script>
+
+    var counter = 10;
+    var numbers = [];
+
+    for (var i = 0; i < 10; i++) {
+        counter = counter + 73;
+        numbers.push(counter); // <--- pushes variable counter into the numbers array, better method...otherwise because multi line of code
+        // numbers[i] = counter;
+        console.log(numbers);
+    }
+
+        if (counter > 740){
+            console.log("too big");
+         } else {
+            console.log("not too big");
+         }
+
+
+
+    var stats = {};
+    function getStats (statsObj, numbersArr) {
+
+
+        statsObj.largestNum = numbersArr[0];
+        // var averageNum = null;
+        //
+        for (var i = 1; i < numbersArr.length; i++) { // start at 1 because we know what 0 is which is 83
+            if (numbersArr[i] > statsObj.largestNum) {
+                statsObj.largestNum = numbersArr[i];
+            }
+        }
+
+
+        var j = 0;
+        var arrTotal = null; // needs to be defined to work in loop. needs to be before loop, otherwise it resets each time it loops
+        while (j < numbersArr.length){
+            //work
+            console.log("J = ", j); //testing
+            arrTotal += numbersArr[j];
+            j++;
+        }
+        statsObj.averageNum = arrTotal/numbersArr.length;
+        console.log(arrTotal);
+
+        return statsObj; //<----- return needs to be right before the closing parenthesis ALWAYS
+    }
+
+    var testStats = getStats(stats,numbers);
+    console.log("teststats" , testStats);
+    console.log("The largest number was " + testStats.largestNum + " and the average of all the numbers was " + testStats.averageNum + ".");
+
+    // PRACTICE VARIABLES PLACEMENT AND RETURN STATEMENTS AND CONSOLE.LOG EVERYTHING
+
+    // OLD ANSWER!!!!
+    // function getStats (statsObj, numbersArr){
+    //    statsObj.largestNum = numbersArr[0];
+    //     // var averageNum = null;
+    //     //
+    //     for (var i = 1; i < numbersArr.length; i++){ // start at 1 because we know what 0 is which is 83
+    //       if (numbersArr[i] > largestNum) {
+    //         statsObj.largestNum = numbersArr[i];
+    //       }
+    //      // var j = 0;
+    //      // var arrTotal = 0;
+    //      // while (j < numbersArr.length -1) {
+    //      //    arrTotal += j;
+    //      //    j++;
+    //      //  }
+    //      //    statsObj.averageNum = arrTotal/numbersArr[j];
+    //         return statsObj;
+    //
+    //     // }
+    // }
+    // var result = getStats(stats, numbers);
+    // console.log(result);
+
+    // var testStats = getStats(stats, numbers);
+    // console.log("The largest number was " + largestNum);
+    // console.log ("The average of all the numbers " + averageNum);
+
+    // Technical Knowledge Assessment - Interview (part 2)
+
+    //INSTRUCTIONS: Like a real-world environment, you are free to reference resources or search Google for help, but you may not ask others for help or post questions online to ask for solutions since this test is gauging your personal abilities, not that of other people.  If there is anything you don't know try to write as much as you can - even if it doesn't work you can still get partial credit if it seems like you were on the right track.
+
+    //1. Create a new variable called "counter" and give it a value of 10
+
+    //2. Create a new variable called "numbers" which is an array with nothing in it
+
+    //3. Write a for loop that runs 10 times and each time it runs add 73 to the counter variable and adds the current value of counter to the numbers array
+
+    //4. Cause the "numbers" array to be logged to the console
+
+    //5. If the value of the "counter" variable is greater than 740 log "too big" to the console; otherwise log "not too big"
+
+
+
+
+    //6. Create a new variable called "stats" which is an empty object
+
+
+
+    //7a. Create a function called "getStats" which does the following
+
+
+
+    //7b. takes in two parameters called "statsObj" (which is an object) and "numbersArr" (which is an array)
+
+
+
+    //7c. loops through the "numbersArr" array, finds the largest number, and sets it as a property called "largestNum" on "statsObj”<—is an object
+
+    //7d. loops through the "numbersArr" array in a while loop and adds all the numbers together into a variable called "arrTotal"
+
+    //7e. divide "arrTotal" by the number of elements in "numbersArr" (this number should be obtained using JavaScript, not hard-coded) and store this in a property called "averageNum" on "statsObj"
+    //7f. return "statsObj"
+    //8. Call the "getStats" function and pass in the "stats" object and the "numbers" array and store the returned value into a new variable called "testStats"
+
+
+
+    //9. Log the values of the "largestNum" and "averageNum" properties of the returned object to the console in the format "The largest number was ## and the average of all the numbers was ##"
+
+
+</script>
+</body>
+</html>

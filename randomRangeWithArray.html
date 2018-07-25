@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>randomRangeWithArray</title>
+</head>
+<body>
+<script>
+    //using an if statement
+    //if 2 arguements that are numbers
+    //or an argument that is an array
+    function findRange(start, end){
+        if(!end){ //*if not end then find random in start array
+            var randomInt = Math.floor(Math.random() * start.length); //* finds random in array
+            return start[randomInt];
+        } else {
+            var difference = (end - start) + 1;
+            var outPut = Math.floor(Math.random() * difference) + start; //* finds random number between 12 and 30
+            return outPut;
+        }
+    }
+    console.log(findRange (12,30));
+    console.log(findRange (["apple", "banana", "goose", "Brazil"]));
+
+</script>
+</body>
+</html>

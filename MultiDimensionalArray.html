@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+
+
+
+        var array = [
+            ['Hi', null, null, 'what', null],
+            ['eat', null, 'Andy', null, 'will'],
+            [null, 'for', 'lunch', null, null],
+            ['?', null, 'today', null, null],
+        ];
+
+        var first = array[1].reverse();
+        var second = array[3].reverse();
+
+
+
+
+        var array2  = [['Hi', null, null, 'what', null], first, [null, 'for', 'lunch', null, null], second]
+
+        var newArray = [];
+        function andyEats(arr){
+
+            for(var i = 0; i < arr.length; i++){
+                for(var j = 0; j < arr[i].length; j++){
+                    if( arr[i][j] !== null){
+                        var sentence = arr[i][j];
+                        newArray.push(sentence);
+
+                    }
+                }
+
+            }
+            return newArray.join(' ');
+        }
+        andyEats(array);
+
+
+
+
+
+
+
+    </script>
+    <title>blank</title>
+</head>
+<body>
+
+</body>
+</html>

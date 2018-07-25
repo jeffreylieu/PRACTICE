@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var circusActs = [
+        "clown",
+        "acrobat",
+        "lion tamer",
+    ];
+
+    var circusStaff = {
+        clown: "Mr. Red Nose",
+        acrobat: "Karen",
+        lion_tamer: "Raul"
+    };
+
+    //*make a function to pass through both the object and the array
+    function addStaff(acts, name){
+        circusActs.push(acts);
+        circusStaff[acts] = name;
+    }
+    console.log(addStaff(circusActs, circusStaff));
+
+</script>
+</body>
+</html>

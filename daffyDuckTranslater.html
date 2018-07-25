@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DaffyDuckTranslator</title>
+</head>
+<body>
+<!--// create a function called daffy duck translater-->
+<!--//everytime you use take in string and return "th" at the begining of the word-->
+<!--//example input: Jeff is the greatest-->
+<!--// example output: " thJeff thIs thThe theGreatst"-->
+
+<!--//hints or pro tips: look into .split and .join-->
+
+<!--//strings arent ammunible, but arrays are.....-->
+
+<!--// do by-->
+
+
+<script>
+    // My attempt:
+    // function daffyDuck(string) {
+    //     var str = "Alicia Is The Greatest";
+    //     var res = str.split(" ");
+    //     for (var i = 0; i < res.length; i++){
+    //         var final = res.join(" th");
+    //         console.log(final);
+    //     }
+    // }
+    // daffyDuck();
+
+
+
+    function daffyDuck(str) {
+
+        var res = str.split(" ");
+        var mod = [];
+
+        for (var i = 0; i < res.length; i++){
+            var translated = "th" + res[i];
+            mod.push(translated);
+            //or res[i] = "th" + res [i];
+
+        }
+        var final = mod.join(" "); //returning a sentence rather than an array.
+        return final;
+    }
+    console.log(daffyDuck("Alicia Is The Greatest"));
+
+</script>
+
+
+</body>
+</html>

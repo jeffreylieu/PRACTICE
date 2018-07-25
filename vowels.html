@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vowels</title>
+</head>
+<body>
+<script>
+    function findTheVowel(string){
+        var newString = string.split("");
+        var vowels = [];
+        // make a conditional for each vowel
+// begin loop
+// get each letter, one at a time
+// compare it with each each vowel and see if it matches
+// if it is, add it to the vowel variable
+        for ( var i = 0; i < newString.length; i++){
+            if (newString[i] === "o" || newString[i] === "u" || newString[i] === "e" || newString[i] === "a"|| newString[i] === "i"){
+                vowels.push(newString[i]);
+            }
+        }
+        var finalVowels = vowels.join("");
+        return finalVowels;
+    }
+    console.log(findTheVowel("four score and seven years ago"));
+
+
+    // other way.....
+
+    // function findTheVowel(string){
+
+    //   var newString = string.split("");
+    //   var vowels = [];
+    //     if(vowels.indexOf(newString[i])!== -1){
+    //     vowels.push(newString[i]);
+    //   var finalVowels = vowels.join("");
+
+    //   return finalVowels;
+    // }
+    // console.log(findTheVowel("four score and seven years ago"));
+    // }
+</script>
+</body>
+</html>

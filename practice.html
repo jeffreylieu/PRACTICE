@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+// given variable cost, and 12 types of beers, increase by 0.63 to each beer type up tp 12
+//similar to the assessment....
+    var cost = 1.00;
+    var beerTypes = [];
+    var mostExpensiveBeer  ;
+        for (var i = 1; i < 12; i++){
+            cost = cost + 0.63;
+            beerTypes.push(cost);
+            console.log(cost); //<-----test
+        }
+    mostExpensiveBeer = beerTypes[beerTypes.length - 1];
+    console.log(mostExpensiveBeer); // <----test
+
+
+    var barMenu = {};
+    barMenu.prices = beerTypes;
+    console.log(barMenu.prices[5]); //<----asked for index
+    console.log(barMenu.prices[2]); //<----asked for value
+
+    // below we are trying to find the MAX number in the array
+    var importPrices = [1.00, 0.75, 5.00, 6.00, 10.00, 3.00];
+    function findMax(array){
+
+        var max = array[0];
+
+        for (var i = 1; i < array.length; i++){
+            if (array[i] > max){
+                console.log(i + ' max number' + array[i]);
+                max = array[i];
+            }
+
+            return max;
+
+        }
+
+    }
+    barMenu.maxImportPrice = findMax(importPrices); //<-----setting maxImportPrice as a property to barMenu
+
+
+    //below is Attempt to find the minimum....
+    var importPrices = [1.00, 0.75, 5.00, 6.00, 10.00, 3.00];
+    function findMin(array){
+
+            var min = array[0];
+
+
+            for (var j = 1; j < array.length; j++){
+                if (array[j] < min) {
+                    console.log( j + ' lowest number ' + array[j]);
+                    min = array[j];
+                }
+            }
+            return min;
+    }
+    barMenu.minImportPrice = findMin(importPrices); //<-----setting maxImportPrice as a property to barMenu
+    console.log(barMenu.minImportPrice);
+
+</script>
+
+</body>
+</html>

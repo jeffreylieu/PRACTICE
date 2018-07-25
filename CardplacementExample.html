@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .card{
+            background-color: red;
+            position: relative;
+            height: 80%;
+            width: 80%;
+            top: 10%;
+            left: 10%;
+        }
+
+        .hiddenSide .coveringSide{
+            position: absolute;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .cardContainer{
+            background-color:blue;
+            height:200px;
+            width: 100px;
+            float: left;
+        }
+
+        .card:hover > .coveringSide{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div class="cardContainer">
+    <div class="card">
+        <div class="hiddenSide">front</div>
+        <div class="coveringSide">back</div>
+    </div>
+
+</div>
+</body>
+</html>

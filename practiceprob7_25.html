@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        /*
+    given 2 arrays, 1 of first names, and 1 of last names
+    return an array of objects with 1 first and last name
+    for each.
+    for example:
+    input:
+       ['Dan','Jane','Jack']
+       ['Hill','Black','Mill']
+     output:
+       [
+         {first: 'Dan', last: 'Hill'},
+         {first: 'Jane', last: 'Black'},
+         {first: 'Jack', last: 'Mill'}
+       ]
+    */
+
+        var firstNames = ['Dan','Jane','Jack'];
+        var lastNames = ['Hill','Black','Mill'];
+        function combineArrays( firstNames, lastNames){
+            var newArr = [];
+
+
+            for(var first = 0; first < firstNames.length; first++){
+                //firstNames[0]
+//     {first:'Dan'}
+                var obj = {};
+                obj.first = firstNames[first];
+                obj.last = lastNames[first];
+                newArr.push(obj);
+            }
+            return newArr;
+        }
+        console.log(combineArrays(firstNames, lastNames));
+
+
+
+
+
+
+    </script>
+</body>
+</html>

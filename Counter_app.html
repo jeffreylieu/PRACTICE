@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+COUNTER APP
+<html>
+<head>
+    <title></title>
+    <style>
+        #displayArea{
+            height: 50vh;
+            width: 50vw;
+            background-color: pink;
+            position: relative;
+        }
+        #displayArea > span {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+</head>
+<body>
+<div id="displayArea">
+    <span>0</span>
+</div>
+</body>
+<script type="text/javascript">
+    /* link to how the app should behave when you get it to work:
+    http://youtu.be/TtMHhqrYf90
+    */
+    var counter = 0;
+    var timerID = null;
+    $("#displayArea").on('click', increaseCounter);/*give the click handler a function that will increase the counter*/
+    $("#displayArea").on('mouseout',handleMouseout);
+    $("#displayArea").on('mouseover',handleMouseover);
+    function increaseCounter(){
+        counter += 1;
+        console.log(counter);
+        updateDisplay();
+
+        //increase the counter global variable by 1, then save the value back into counter
+        //call the function that updates the span in the displayArea div
+    }
+    function decreaseCounter(){
+        console.log('test')
+        if (counter <= 0){
+            handleMouseover();
+            counter === 0;
+            return counter;
+            //if the counter global variable is less than or equal to 0
+            //call the handleMouseover function
+            //set the counter global variable to 0
+            //exit the function
+        }
+        counter -= 1;
+
+        updateDisplay();
+        //decrease the counter by one, and save the result back into the counter variable
+        //call the updateDisplay function
+    }
+    function updateDisplay(){
+        $("#displayArea span").text(counter);
+        //change the text of the span inside the div.  The div has an id of displayArea.  The text will be changed to the value currently inside the global variable of counter
+    }
+    function handleMouseout(){
+        timerID = setInterval(decreaseCounter, 500);//call the setInterval function (it is a default function, not one defined here).  pass in the following 2 parameters: the name of the function that decreases the counter, and 500.   setInterval returns a value, save that value in the global variable "timerID"
+    }
+    function handleMouseover(){
+        clearTimeout(timerID);//call the clearTimeout function (not defined here, it is available by default.  pass in the global variable timerID as an argument
+    }
+</script>
+</html>

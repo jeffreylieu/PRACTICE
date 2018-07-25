@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var menuObj = {
+        beer: {
+            price: 5.75,
+            type: "Bud",
+            id_required: true
+        },
+        appetizer: {
+            price: 4.50,
+            type: "nachos",
+            id_required: false
+        },
+        meal: {
+            price: 10.25,
+            type: "burger",
+            id_required: false
+        }
+    }
+
+    var beer = menuObj.beer;
+    var counter = 1;
+    for (var detail in beer){
+        var string = "" + detail + ": " + beer[detail];
+        $('p:nth-child('+counter+')').text(string);
+        counter++;
+    }
+
+</script>
+
+</body>
+</html>

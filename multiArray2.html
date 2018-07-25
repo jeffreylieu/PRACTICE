@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <script>
+        var battlefield = [
+            ["X", "O", "X", "O", "O"],
+            ["X", "O", "O", "O", "O"],
+            ["O", "X", "O", "O", "O"],
+            ["O", "O", "O", "O", "X"],
+            ["X", "O", "O", "X", "O"],
+        ];
+
+        function findEnemies(array) {
+            var outPut = [];
+            //* i represents the first array
+            //* j represents the arrays in the first array
+            for (var i = 0; i < array.length; i++) {
+                for (var j = 0; j < array[i].length; j++) {
+                    if (array[i][j] === "X") {
+
+                    }
+                }
+            }
+            return outPut;
+        }
+        console.log(findEnemies(battlefield));
+    </script>
+
+</body>
+</html>

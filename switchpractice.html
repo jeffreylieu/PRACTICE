@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>comparisons</title>
+</head>
+<body>
+<script>
+    var flavor = [];
+    var day = 'wed';
+
+
+    switch(day){
+        case 'mon':
+            flavor.push('mint');
+            break;
+        case 'tue':
+            flavor.push('chocolate');
+            break;
+        case 'wed':
+            flavor.push('tiramisu');
+            break;
+        case 'thu':
+            flavor.push('rocky road');
+            break;
+        case 'fri':
+            flavor.push('caramel');
+            break;
+    }
+//* version of comparisons:
+//* 1 version-----------------
+    if(operator === 'x' || operator === 'X' || operator === '*'){
+        return num1 * num2;
+    }
+
+//* 2nd version-----------------
+    if(operator === 'x'){
+        return num1 * num2;
+    } else if (operator==='X'){
+        return num1 * num2;
+    } else if (operator==='*'){
+        return num1 * num2;
+    }
+//* 3rd version-------------------
+    switch(operator){
+        case 'x':
+        case 'X':
+        case '*':
+            return num1 * num2;
+    }
+    console.log('the flavor for today is ' + flavor);
+</script>
+</body>
+</html>

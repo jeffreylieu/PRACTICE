@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var battlefield = [
+            ["X", "O", "X", "O", "O"],
+            ["X", "O", "O", "O", "O"],
+            ["O", "X", "O", "O", "O"],
+            ["O", "O", "O", "O", "X"],
+            ["X", "O", "O", "X", "O"],
+        ];
+
+        // loop through battlefield array
+        // find enemies = "x" at address in an array
+        // 1st loop through battlefield then return each address with enemies
+
+        for (var i = 0; i < battlefield.length; i++){
+            if (battlefield[i][0] = "X"){
+                console.log("true");
+            } else {
+                console.log("false");
+            }
+        }
+
+        for (var i = 0; i < battlefield.length; i++){
+            for(var j = 0; j < battlefield[i].length; j++){
+
+                if(battlefield[i][j] === "X"){
+                    console.log(i,j);
+                }
+            }
+        }
+
+
+        function findEnemies(array) {
+            var outPut = [];
+
+            for (var i = 0; i < battlefield.length; i++) {
+                for (var j = 0; j < battlefield[i].length; j++) {
+                    if (battlefield[i][j] === "X") {
+                    }
+                }
+            }
+            return outPut;
+        }
+        findEnemies(battlefield);
+
+    </script>
+</body>
+</html>

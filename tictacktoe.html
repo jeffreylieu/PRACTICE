@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tictactoe</title>
+    <meta name="viewport" content="width=device-width">
+
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
+</head>
+<body>
+<style>
+    html{
+        font-size: 5vmin;
+    }
+    body{
+        font-size:0;
+        margin: 0;
+    }
+    .cell{
+        border: 1px solid red;
+        height: 33vmin;
+        width: 33vmin;
+        display: inline-block;
+        font-size: 1rem;
+        vertical-align: top;
+        box-sizing: border-box;
+    }
+</style>
+
+<script>
+    // DOM creation
+    // make a tic tac toe board
+    // make dynamic
+
+    function makeGrid(number){
+
+        var gridSize = 100/number;
+        var gridString = gridSize + "vw";
+        var totalSq = number * number;
+
+        for(var cellCounter = 0; cellCounter < totalSq; cellCounter++){
+            var oneSquare = $('<div>', {
+                class : 'cell',
+                height: gridString,
+                width: gridString,
+            })
+
+            $("body").append(oneSquare);
+
+        }
+
+    }
+    makeGrid(100);
+</script>
+</body>
+</html>

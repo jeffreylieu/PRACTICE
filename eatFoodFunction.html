@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eat Food Function</title>
+</head>
+<body>
+<script>
+    //"write a 'function' with conditionals...."
+
+
+    function eatFood (food, weight, typeOfWeight){
+        var outputString;
+        var weightCon;
+
+        if(typeOfWeight === "ounces"){
+            weightCon = weight;
+        } else if(typeOfWeight === "pounds"){
+            weightCon = weight * 16;
+        } else if (typeOfWeight === "kilograms"){
+            weightCon = weight * 35.02;
+        }
+        outputString = "You ate " + weightCon + " ounces of " + food;
+
+        return outputString;
+    }
+
+
+
+    console.log(eatFood('chicken', 2, 'ounces')); //* you ate 2 ounces of chicken
+    console.log(eatFood('salad', 3,'pounds')); //* you ate 48 ounces of salad multiply by 16
+    console.log(eatFood ('mangos', 0.5,'kilograms')); // * you ate 70.04 ounces multiply by 35.02
+
+    /*take in a food, a weight, and a type of weight.  convert the weight
+    to ounches, and output the above strings */
+</script>
+</body>
+</html>
