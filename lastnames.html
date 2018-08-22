@@ -2,27 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+    <title>Last Names Problem</title>
     <script>
         /*
-    given 2 arrays, 1 of first names, and 1 of last names
-    return an array of objects with 1 first and last name
-    for each.
-    for example:
-    input:
-       ['Dan','Jane','Jack']
-       ['Hill','Black','Mill']
-     output:
-       [
-         {first: 'Dan', last: 'Hill'},
-         {first: 'Jane', last: 'Black'},
-         {first: 'Jack', last: 'Mill'}
-       ]
-    */
-        
-
+given 2 arrays, 1 of first names, and 1 of last names
+return an array of objects with 1 first and last name
+for each.
+for example:
+input:
+   ['Dan','Jane','Jack']
+   ['Hill','Black','Mill']
+ output:
+   [
+     {first: 'Dan', last: 'Hill'},
+     {first: 'Jane', last: 'Black'},
+     {first: 'Jack', last: 'Mill'}
+   ]
+*/
         var firstNames = ['Dan','Jane','Jack'];
         var lastNames = ['Hill','Black','Mill'];
         function combineArrays( firstNames, lastNames){
@@ -39,13 +35,11 @@
             }
             return newArr;
         }
-        console.log(combineArrays(firstNames, lastNames));
-
-
-
-
-
+        combineArrays(firstNames, lastNames);
 
     </script>
+</head>
+<body>
+
 </body>
 </html>
