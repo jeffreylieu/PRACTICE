@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Singluar or plural Values</title>
+</head>
+<body>
+<script>
+    /*
+given 2 arrays, 1 of numbers, and one of words
+return an array of true and false values
+
+true if they are number and the animal singular agree
+false if they do not agree
+for example:
+input:
+  [1,3,2]
+  ['dogs','planes','tree']
+output:
+  [false, true, false]
+*/
+    var numArr = [1,3,2];
+    var wordsArr = ['dogs','planes','tree'];
+    function pluralAgreement(numbers, words){
+        var newArr = [];
+        for(var i = 0; i < numArr.length; i++){
+            if(numArr[i] === 1 && wordsArr[i].slice(-1)!=='s'){
+                newArr.push(true);
+            } else if(numArr[i] > 1 && wordsArr[i].slice(-1)=='s'){
+                newArr.push(true);
+            } else {
+                newArr.push(false);
+            }
+        }
+
+        return newArr;
+    }
+    console.log(pluralAgreement(numArr, wordsArr));
+</script>
+</body>
+</html>
