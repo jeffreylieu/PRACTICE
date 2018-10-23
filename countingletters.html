@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+    <script src="" async defer>
+    /*
+write a function, given a word, that returns an object
+with the count of vowels and consonants in it
+input: 
+    'stupify'
+output:
+    {
+       vowels: 2,
+       consonants: 5
+    }
+*/
+
+function countLetters( word ){
+//   var vowelsCount = 0;
+//   var consonants = 0;
+  var output = {
+    vowels: 0,
+    consonants: 0
+  };
+  word = word.split('');
+    for(var i = 0; i < word.length; i++) {
+      if(word[i] === "a" || word[i] === "e" || word[i] === "i" || word[i] === "o" || word[i] === "u"){
+        output.vowels++;
+    } else if (word[i] !== "a" || word[i] !== "e" || word[i] !== "i" || word[i] !== "o" || word[i] !== "u"){
+        output.consonants++;
+    }
+     
+  }
+  return output;
+
+}
+
+console.log(countLetters('stupify'));</script>
+  </body>
+</html>
