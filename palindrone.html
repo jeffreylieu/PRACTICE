@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Palindrone</title>
+</head>
+<body>
+    <script>
+        function pallon(string){
+  var newString = Math.floor(string.length / 2);
+  for (var i = 0; i < newString; i++)
+    if (string[i] !== string[string.length - i - 1])
+      return false;
+   
+  return true;
+     
+}
+console.log(pallon('tacocat'));
+console.log(pallon('lisabonetatenobasil'));
+
+// need to lower case
+console.log(pallon('A man, a plan, a canal : panamoa!'));
+
+//better way 
+function word(string){
+  var first_word = '';
+  for(var j = string.length - 1; j >= 0; j--){
+    first_word+=string[j];
+  } if (first_word === string){
+    return first_word;
+  }
+  return 'not a palindrone';
+}
+console.log(word('tacocat'));
+console.log(word('hippopotamus'));
+
+
+    </script>
+</body>
+</html>
