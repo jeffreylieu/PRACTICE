@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //'HELP WE HAVE BEEN SPOTTED'
+     //    1       1      1     1
+     //     2    2  2    2 2  2  2
+     //      3  3    3  3   33    3
+     //       4       4      4
+        function encodeStr( inputStr ){
+            inputStr = inputStr.replace(/ /g,''); //strips all spaces from str
+            const output = {} //create an empty output var for storage of each row
+            const maxDepth = 3; //set a var for how many rows for the encoder
+            let oscIndex = 0; //set a var that takes in a number starting point of oscillator
+            let oscillate = true //set a boolean so the function can determine between adding or subtracting
+        
+            //set a loop to go through each letter of the string
+            for (var i=0; i<inputStr.length; i++){
+                //check to see if the index already exist.
+                if(output[oscIndex]){
+                    output[oscIndex] += inputStr[i];
+                }else{
+                    output[oscIndex] = inputStr[i];
+                }
+                
+                if(oscillate){
+                    if (++oscIndex == maxDepth){
+                        oscillate = false;
+                    }
+                }else{
+                    if (--oscIndex == 0){
+                        oscillate = true;
+                    }
+                }
+            }
+            const result = output[0]+output[1]+output[2]+output[3];
+            return result;
+        }
+        
+        
+        str = 'HELP WE HAVE BEEN SPOTTED';
+        console.log(encodeStr(str));
+        </script>
+</body>
+</html>
