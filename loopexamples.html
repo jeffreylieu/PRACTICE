@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // EXAMPLE LOOP PROBLEM:
+// 1 initiate
+// 2 check
+// 3 work
+// 4 increment, repeat 2
+
+
+
+// for (var x = 0; x < 3; x++){
+//   for (var y = x; y < x+1; y++){
+//     console.log(y*x);
+//   }
+// }
+
+// loop in an loop 
+for (var x = 1; x < 4; x++){
+  for (var y = 1; y < 4; y++){
+    var string = x + " * " + y + " = " + (x*y);
+    console.log(string);
+  }
+}
+
+
+//CLASS EXAMPLES no neccessarily working code
+
+var studentArray = [{name: "Bob", grade:87}, {name: "Fred", grade:82}, {name: "George", grade: 93}, {name: "Robert", grade: 85}];
+
+
+
+function findStudent(students, nameToFind){
+  var index = 0;
+  while( students[index].name !== nameToFind){
+    return index++;
+  }
+  index++;
+}
+
+function findStudent2(students){
+  for(var index = 0; index < students.length; index++){
+    if(students[index].name === 'George'){
+      return index;
+    } 
+  }
+  return false;
+}
+
+if(findStudent2(studentArray) === false){
+  console.log('found student at ' +i);
+} else {
+  console.log('could not find student');
+}
+    </script>
+</body>
+</html>
