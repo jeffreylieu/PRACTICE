@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            class CoinStack{
+            constructor(startingCoins){
+                this.value = startingCoins; //should be set to the starting coins amount
+
+            }
+            addCoins(coinsToBeAdded){
+                this.value = coinsToBeAdded + this.value; // coins should be added to the value property of CoinStack
+                return this.value;
+            }
+            removeCoins(coinsToBeRemoved){
+                if(this.value >= coinsToBeRemoved){
+                    this.value = this.value - coinsToBeRemoved; //Remove the given amount of coins from value
+                    return coinsToBeRemoved;
+                }
+                if(this.value < coinsToBeRemoved){ //problem area CHECK AGAIN
+                    var coinsOnHand = this.value;
+                    this.value = this.value - this.value; //removing all coins from value
+                    return coinsOnHand;
+                }
+            }
+
+        }
+        CoinStack.prototype.transferCoins = function(fromStack, amount){
+            var givenAmountOfCoins = fromStack.removeCoins(amount); //take the given amount of coins and remove them from the passed in object and then add them to the current object
+            this.addCoins(givenAmountOfCoins);
+            return givenAmountOfCoins;
+        }
+
+
+        var fs1CoinStack = new CoinStack(50);
+        console.log('fs1CoinStack contains ' + fs1CoinStack.value + ' coins');
+
+        var one = new CoinStack(50);
+        var two = new CoinStack(50);
+
+        console.log('Coin stack one contains ' + one.value + ' coins');
+        console.log('Added:', one.addCoins(25));
+        console.log('Coin stack one contains ' + one.value + ' coins');
+        console.log('Removed ', one.removeCoins(40), ' out of 40 coins');
+        console.log('Coin stack one contains ' + one.value + ' coins');
+        console.log('Removed ', one.removeCoins(60), ' out of 60 coins');
+        console.log('Coin stack one contains ' + one.value + ' coins');
+
+        console.log('Coin stack two contains ' + two.value + ' coins');
+        console.log('Added:', two.addCoins(25));
+        console.log('Coin stack two contains ' + two.value + ' coins');
+        console.log('Removed ', two.removeCoins(40), ' out of 40 coins');
+        console.log('Coin stack two contains ' + two.value + ' coins');
+        console.log('Removed ', two.removeCoins(60), ' out of 60 coins');
+        console.log('Coin stack two contains ' + two.value + ' coins');
+
+        one.addCoins(50);
+        two.addCoins(50);
+
+        console.log('One value:', one.value);
+        console.log('Two value:', two.value);
+
+        console.log('Transfer 25 from two to one', one.transferCoins(two, 25));
+        console.log('One value:', one.value);
+        console.log('Two value:', two.value);
+
+        console.log('Transfer 20 from two to one', one.transferCoins(two, 20));
+        console.log('One value:', one.value);
+        console.log('Two value:', two.value);
+
+        console.log('Transfer 125 from one to two', two.transferCoins(one, 125));
+        console.log('One value:', one.value);
+        console.log('Two value:', two.value);
+    </script>
+</body>
+</html>
