@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function lettersChanges(str){
+    var newStr = str.replace(/[a-z]/gi, function(char){
+        if(char === 'z' || char ==='Z'){
+        return 'a';
+        }else{
+        return String.fromCharCode(char.charCodeAt() + 1);
+        }
+    });
+    
+    return newStr;
+    }
+
+    console.log(lettersChanges('Hello Therez'));
+
+    </script>
+</body>
+</html>
