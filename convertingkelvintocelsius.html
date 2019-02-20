@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Converting Kelvin to celsius</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
+    <script src="main.js"></script>
+</head>
+<body>
+    <script>
+        //temp in kelvin stored in variable 'kelvin'
+        var kelvinTemp = 301;
+        //temp in celsius stored in variable 'celsius'
+        var celsiusTemp = kelvinTemp - 273.15;
+        //convert celsius to fahrenheit stored in variable'fahrenheit'
+        var fahrenheitTemp = celsiusTemp * (9/5) + 32;
+        //round the value of fahrenheit down and asign to 'fahrenheit'
+        fahrenheitTemp = Math.floor(fahrenheitTemp);
+
+        console.log(fahrenheitTemp);
+        // use string concatenation to leave a message 
+        console.log('The temperature is '+ fahrenheitTemp + ' degrees Fahrenheit');
+    </script>
+</body>
+</html>
