@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>object constructor function practice</title>
+</head>
+<body>
+    <script>
+        // var home = {
+        //     rooms: 4,
+        //     apartment: false,
+        //     color: 'brown',
+        //     swimmingPool: true,
+        //     state: 'WA',
+        //     city: 'Seattle'
+        // };
+
+        // var home2 = {
+        //     rooms: 2,
+        //     apartment: true,
+        //     color: 'white',
+        //     swimmingPool: false,
+        //     state: 'CA',
+        //     city: 'Sacramento'
+        // };
+
+        function Home(rooms, apartment, color, swimmingPool, state, city){
+            this.room = rooms;
+            this.apartment = apartment;
+            this.color = color;
+            this.swimmingPool = swimmingPool;
+            this.state = state;
+            this.city = city;
+        }
+
+        var home1 = new Home(3, false, 'blue', true, 'Atlanta', 'GA');
+        var home2 = new Home(10, true, 'white', false, 'Orange County', 'CA');
+        var home3 = new Home(5, true, 'red', false, 'Gummo', 'OH');
+        var home4 = new Home(25, false, 'brown', true, "Dragon Stone", 'WS');
+
+        var book = {
+            author: "Victor Hugo",
+            title: 'Les Mes',
+            pages: 1200
+        };
+
+        function Book(author, title, pages){
+            this.author = author;
+            this.title = title;
+            this.pages = pages;
+        }
+
+        var book1 = new Book('Rick Remender', "Deadly Class", 100);
+        var book2 = new Book('Batman', 'Scott Snyder', 550);
+        var book3 = new Book('Geraad Way','Umbrealla Academy', 202)
+
+    </script>
+</body>
+</html>
