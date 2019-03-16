@@ -61,6 +61,48 @@
     shoppingList.unshift('lemonade','orange juice');//this adds items to the front of the array.
 
 
+    // review array methods
+    // concat method - join two or more arrays
+    // reverse method - reverse order of Elements
+    // sort method - sort alpha numeric
+    // slice method - returns but does not delete a section
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+
+    var color2 = ['black', 'white', 'brown', 'purple'];
+
+    var allColors = colors.concat(colors2);
+
+    var colors3 = ['pink', 'silver', 'bloodorange', 'poop'];
+    
+    var allColors2 = colors.concat(color2, colors3);
+    //adding all color arrays together 
+
+    //challenge
+    // reverse all the elements in the allColors array
+    //sort all the elements in the allColors array by alphabetical order
+
+        var reverseColors = allColors2.reverse();
+        //reverse order of array 
+        var sortColors = allColors2.sort();
+        //sorts alphabetically the array
+
+    //challenge
+    //create var winter and fill in with winter values
+    //create var summer and fill in with summer values
+    var weather = ['rainy', 'cold', 'chilly', 'snowy', 'cloudy', 'hot', 'warm', 'humid'];
+    
+    var winter = weather.slice(0,5);
+    //pulls the winter aspects
+    var summer = weather.slice(5, 8);
+    //pulls the summer aspects
+
+
+    
+
+
+
+
+
     </script>
 </body>
 </html>
