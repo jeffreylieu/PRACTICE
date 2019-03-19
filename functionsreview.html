@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Functions Review</title>
+</head>
+<body>
+    <script>
+    function goodMorningNeightbor(){
+        return 'Good Morning, Neighbor!';
+    }
+
+    goodMorningNeightbor();
+    //////////////////////////////////////
+
+    function goodEveningNeighbor(name, task) {
+    return 'Good evening, ' + name + ' thanks for ' + task + '!';
+    }
+
+    goodEveningNeighbor('Hank' , 'thanks for pickin up the dog poop');
+
+    ///anonymous function 
+    var morningGreeting = function(){
+    return 'Good morning, neighbor!';
+    }
+
+    morningGreeting(); ///must call function to get return statement
+
+
+    ///functional expression 
+    var greeting1 = function(){
+        return 'Hello, everyone!';
+    }
+
+    greeting1; // returns functional code
+
+    ///IFFE
+    var greeting2 = (function(){
+        return 'Hello, everyone!';
+    }());
+
+    greeting2; // returns 'Hello Everyone'
+
+
+    //challenge
+    //create an immediately involked function expression
+    //store the IFFE within a variable and cal it
+
+
+    //this is an immediately invoked function
+    (function(person, dog){
+    return person + ' is taking ' + dog + ' for a walk.';
+    }('Paul', 'Charlie'));
+    //above immediately runs the function and you get : "Paul is taking Charlie for a walk."
+
+
+    //storing IFFE with a variable and call
+    var dogWalker = (function(person, dog){
+    return person + ' is taking ' + dog + ' for a walk.';
+    }('Paul', 'Charlie'));
+//above function is saved to a variable then you only need to call varable 'dogWalker;' to run the function and get the value which is "Paul is taking Charlie for a walk.".
+
+    </script>
+</body>
+</html>
