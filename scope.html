@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SCOPE</title>
+</head>
+<body>
+    <script>
+        //example
+        var scope = 'public';
+        var newScope = 'global variable';
+        function checkScope(){
+            var scope = 'private';
+            return [scope, newScope];
+        }
+
+        newScope; //returns 'global varable';
+        checkScope(); //returns 'local variable which is "private" and  'global variable'
+
+
+       //// without "var" keyword variable is automatically global variable 
+
+////////bad practice because no use of 'var' keyword
+        function roadTrip(){
+        gallons = 12;
+        mpg = 34;
+        return gallons * mpg;
+        }
+        roadTrip();
+/////////////////////////////////////////////////
+
+
+    //challenge
+    //scope chain
+    // local scope => parent scope => grandparent scope => etc... => global scope => error
+
+
+        ///////better code practice
+
+        //below are global values
+        var gallons = 12;
+        var mpg = 34;
+
+        function roadTrip(){
+        return gallons * mpg;
+        }
+
+//NESTED FUNCTION EXAMPLE
+
+    //possible solution
+    //have the innermost child function grab a value from the parent and the grandparent scope
+    
+    var height = 10;
+
+    function volume(){
+        //parent scope
+        var width = 10;
+        var length = 10;
+        var volumeOfObject = function () {
+         //child or local scope   
+            return length * width * height;
+        }
+        // return value of function experssion volumeOfObject
+        return volumeOfObject()
+    }
+    volume();
+    </script>
+</body>
+</html>
