@@ -14,3 +14,4 @@ const rain = () => {
 };
 
 rain();
+//type node rain.js in terminal to run code
