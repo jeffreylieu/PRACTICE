@@ -3,7 +3,7 @@ window.onload = () => {
     const context = canvas.getContext("2d");
     const quads = [];
     const size = 8;
-    const colors = ["#EEEEEE", "blue", "#FF4422"];
+    const colors = ["teal", "yellow", "grey"];
 
     const init = () => {
         canvas.width = 400;
@@ -30,10 +30,10 @@ window.onload = () => {
     };
 
     function Quad(x, y, width, height) {
-        let xVel = Math.random() * 10;
+        let xVel = Math.random() * 20;
         let yVel = Math.random() * 10;
         let colorIndex = 0;
-        let angle = Math.random() * 20;
+        let angle = Math.random() * 40;
         const speed = .1;
         const xTp = 300;
         const yTp = 250;
