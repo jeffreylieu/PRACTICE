@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>looppractice</title>
+</head>
+<body>
+    <script>
+    //while loop example
+    var score = 0;
+    while (score < 5) {
+        console.log(score);
+        score++;
+    }
+
+    //do/while loop example
+    var value = 5;
+    do {
+        console.log(value);
+        value++;
+    } while (value < 3);
+
+
+    //for loop
+    // for(initalization; condition; update){
+    //     code block to be ran;
+    // }
+    for (var i = 0; i < 10; i++) {
+        console.log('My favorite number is ' + i + '!');
+    }
+
+    // loop example with arrays
+    var zooNames = ['lion', 'tiger', 'bear'];
+    var arrayLength = zooNames.length;
+    for (var i = 0; i < arrayLength; i++) {
+        console.log('My Favorite zoo animal is the ' + zooNames[i] + '!');
+    }
+//////////////////////
+        
+
+var i = 0;
+while(i < 5){
+    console.log('This  counter has run ' + (i + 1) + ' Times.');
+    i++;
+}
+
+
+var i = 5;
+do {
+    console.log('loop ran even with false expression');
+    i++;
+} while (i < 5);
+
+
+var numbers = [333, 327, 267, 294, 303, 310, 255, 242, 217];
+
+    for (i = 0; i < numbers.length; i++) {
+        if (numbers[i] > 380) {
+            console.log('short number');
+        } else if (numbers[i] > 280) {
+            console.log('need a better number');
+        } else if (numbers[i] > 250) {
+            console.log('what number is this');
+        } else {
+            console.log('left over');
+        }
+    }
+
+
+
+
+
+    </script>
+</body>
+</html>
