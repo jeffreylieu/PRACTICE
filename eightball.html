@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>eightball</title>
 </head>
+
 <body>
     <script>
         var userName = prompt('What is your name');
@@ -25,59 +27,62 @@
         console.log(randomNumber);
 
         var eightBall = '';
-
-        // switch (randomNumber){
-        //     case 0:
-        // eightBall = 'It is certain';
-        //     break;
-        //     case 1:
-        // eightBall = 'It is decidedly so';
-        //     break;
-        //     case 2:
-        // eightBall = 'Reply hazy try again';
-        //     break;
-        //     case 3:
-        // eightBall = 'Cannot predict now';
-        //     break;
-        //     case 4:
-        // eightBall = 'Dont count on it';
-        //     break;
-        //     case 5:
-        // eightBall = 'My sources say no';
-        //     break;
-        //     case 6:
-        // eightBall = 'Outlook not so good';
-        //     break;
-        //     case 7:
-        // eightBall = 'Signs point to yes';
-        //     break;
-        // }
-
-        //////
-        if (randomNumber === 0) {
-        return 'Better not tell you now.';
-        } else if (randomNumber === 1) {
-        return 'Concentrate and ask again.';
-        } else if (randomNumber === 2) {
-        return 'Reply hazy try again';
-        } else if (randomNumber === 3) {
-        return 'Cannot predict now';
-        } else if (randomNumber === 4) {
-        return 'Dont count on it';
-        } else if (randomNumber === 5) {
-        return 'My reply is no.';
-        } else if (randomNumber === 6) {
-        return 'Outlook not so good';
-        } else if (randomNumber === 7) {
-        return 'Reply hazy try again';
-        } else {
-        return 'Signs point to yes';
+        switch (randomNumber){
+            case 0:
+        eightBall = 'It is certain';
+            break;
+            case 1:
+        eightBall = 'It is decidedly so';
+            break;
+            case 2:
+        eightBall = 'Reply hazy try again';
+            break;
+            case 3:
+        eightBall = 'Cannot predict now';
+            break;
+            case 4:
+        eightBall = 'Dont count on it';
+            break;
+            case 5:
+        eightBall = 'My sources say no';
+            break;
+            case 6:
+        eightBall = 'Outlook not so good';
+            break;
+            case 7:
+        eightBall = 'Signs point to yes';
+            break;
         }
+
+
+        // if (randomNumber === 0) {
+        // return 'Better not tell you now.';
+        // } else if (randomNumber === 1) {
+        // return 'Concentrate and ask again.';
+        // } else if (randomNumber === 2) {
+        // return 'Reply hazy try again';
+        // } else if (randomNumber === 3) {
+        // return 'Cannot predict now';
+        // } else if (randomNumber === 4) {
+        // return 'Dont count on it';
+        // } else if (randomNumber === 5) {
+        // return 'My reply is no.';
+        // } else if (randomNumber === 6) {
+        // return 'Outlook not so good';
+        // } else if (randomNumber === 7) {
+        // return 'Reply hazy try again';
+        // } else {
+        // return 'Signs point to yes';
+        // }
 
 
 
         console.log('User question: ' + userQuestion);
         console.log('The eight ball answer: ' + eightBall);
+    </script>
+</body>
+
+</html>
 
 
 
