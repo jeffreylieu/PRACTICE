@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>regex</title>
+</head>
+<body>
+    <script>
+        var sport1 = 'baseball';
+        var sport2 = 'football';
+        var sport3 = 'soccer';
+
+
+        regEx = /[rst|ne]/g;
+        //macthes any characters in the brackets
+        regEx = /[^rst|ne]/g; 
+        //matches any characters not in the brackets
+
+        sport1.match(regEx);
+        sport2.match(regEx);
+        sport3.match(regEx);
+
+
+        /////////////////////////////////////
+        var guess1 = 'Steve';
+        var guess2 = 'Joe';
+        var guess3 = 'Mike';
+        var guess4 = 'Rob';
+        var guess5 = 'Merrill';
+        var regExAnswer = /Rob|Merrill/i;
+
+
+        //////////////////////////////////////
+        var trip = 'We should take the car';
+        var regEx1 = /car/;
+        var regEx2 = /plane/;
+        var tripCar = trip.search(regEx1);
+        var tripPlane = trip.search(regEx2);
+
+        /////////////////////////////////////
+        let cat = {};
+
+        cat = {
+            sound: 'meow',
+            speak: function(){
+                console.log(this.sound);
+            }
+        };
+        cat.speak();
+        ///////////////////////////////////////
+        //////Use bind method twice to give 'this' the context of person1 and person2
+        let person1 = {
+            name: 'Alex'
+        };
+
+        let person2 ={
+            name: 'Alexis'
+        };
+
+        function namer(){
+            return this.name;
+        };
+
+        //run these in console
+        namer.bind(person1)();
+        namer.bind(person2)();
+
+
+
+
+
+    </script>
+</body>
+</html>
