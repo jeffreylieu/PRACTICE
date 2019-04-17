@@ -50,7 +50,7 @@
         };
         cat.speak();
         ///////////////////////////////////////
-        //////Use bind method twice to give 'this' the context of person1 and person2
+        //////Use BIND method twice to give 'this' the context of person1 and person2
         let person1 = {
             name: 'Alex'
         };
@@ -64,8 +64,29 @@
         };
 
         //run these in console
+        //we are attaching the bind method to the namer function and passing the objects through the function
         namer.bind(person1)();
         namer.bind(person2)();
+
+        ///////////////////////////////////////////
+        //BIND practice
+        let number = {
+            x: 24,
+            y: 22
+        };
+
+        let count = function(){
+            console.log(this.x + this.y);
+        };
+
+        count.bind(number)(); // equals 46
+        //OR
+        //create new variable and set it to value of count function with the bind method and pass argument of the number object giving it the context of number object
+        let boundFunc = count.bind(number);
+
+        //then invoke the boundFunc variable
+        boundFunc(); //equals 46
+
 
 
 

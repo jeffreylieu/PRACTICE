@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>This and Call method</title>
+</head>
+<body>
+    <script>
+        var obj = {num:2};
+
+        var addToThis = function(a,b,c){
+        return this.num + a + b + c
+        }; //this.num does not have context here
+
+        addToThis.call(obj, 1, 2, 3); // equals 8
+        //in this call method 'obj' refers to this.num context which num:2, 1 = a, 2= b, 3=c therefore obj = 2 + 1 + 2 + 3 = 8
+        
+
+    </script>
+</body>
+</html>
