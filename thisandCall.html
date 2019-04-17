@@ -8,6 +8,7 @@
 </head>
 <body>
     <script>
+        //example 1
         var obj = {num:2};
 
         var addToThis = function(a,b,c){
@@ -17,6 +18,52 @@
         addToThis.call(obj, 1, 2, 3); // equals 8
         //in this call method 'obj' refers to this.num context which num:2, 1 = a, 2= b, 3=c therefore obj = 2 + 1 + 2 + 3 = 8
         
+
+        //example 2
+        var person1 = {firstName: 'John', lastName: 'Doe'};
+        var person2 = {firstName: 'Jane', lastName: 'Doe'};
+
+        function hello (greeting){
+            console.log(greeting + '' + this.firstName + '' + this.lastName);
+        }
+        hello.call(person1, 'Hello');
+        hello.call(person2, 'HOLA!');
+
+        ////////////////////////////////////
+        //LAB
+
+        var myLanguages = function(lang1, lang2, lang3){
+            console.log('My name is ' + this.name + ' and I know ' + lang1 + ', ' + lang2 + ', and ' + lang3);
+        };
+
+        //challenge
+        //create 2 people objects with a name property and value
+        //use the call method on our function
+        //pass person object as the first argument followed by arguments for the langauges
+
+        var person1 = {
+            name: 'Jeff',
+            value: 39
+        }
+
+        var person2 = {
+            name: 'Jenee',
+            value: 38
+        }
+
+        myLanguages.call(person1, 'chinese', 'Japanese', 'yetish');
+
+        //another way
+
+        var person2 = {
+        name: 'Jenee'
+        }
+
+        var languages = ['English', 'Spanish', 'German'];
+        myLanguages.call(person2, languages[0],languages[1], languages[2]);
+
+
+
 
     </script>
 </body>
