@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OddNumbersInOddNumbers</title>
+</head>
+<body>
+    <script>
+
+        function findNumber(arr, k) {
+                var n = arr.indexOf('k');
+                if (n == 'k') {
+                    return 'yes';
+                } else {
+                    return 'no';
+                }
+
+            }
+            console.log(findNumber([1, 2, 3, 4, 5], 9));
+            /////finding if a number is in an array
+
+
+        function OddNumbers(l, r) {
+                var i;
+                for (i = l; i <= r; i++) {
+                    if (i % 2 != 0)
+                        console.log(i);
+                }
+            }
+            OddNumbers(3, 30);
+            ///////////// finding the odd numbers between 2 numbers
+
+
+
+
+    </script>
+</body>
+</html>
