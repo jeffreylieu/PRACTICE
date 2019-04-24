@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OOP</title>
+</head>
+<body>
+    <script>
+        var weather = [72, 84, 34, 56, 92, 24, 47, 85, 72, 54];
+
+        var goOutside = []; //<=== initializes an array to be used
+
+        for (var i = 0; i < weather.length; i++){
+            if (weather [i] > 70){
+                goOutside.push(weather[i]);
+            }
+        }
+
+        goOutside; //<== [72, 84, 92, 85, 72]
+
+        /// using filter method
+        //Definition and Usage
+        // The filter() method creates an array filled with all array elements that pass a test (provided as a function).
+        //pass a function to filter method and return an array of all elements that return a value of true
+        var niceWeather = function(temp){
+            return temp > 70;
+        }
+
+        var goOutside = weather.filter(niceWeather);
+
+        goOutside;
+
+        /// done another way
+
+        var goOutside = weather.filter(function(temp){
+            return temp > 70;
+        })
+
+        ////////////////////////////////////////////
+        //practice with objects
+
+        var forecast = [
+            {day: 'Monday', sun: true},
+            {day: 'Tuesday', sun: false},
+            {day: 'Wednsday', sun: false},
+            {day: 'Thursday', sun: true},
+            {day: 'Friday', sun: false},
+            {day: 'Saturday', sun: true},
+            {day: 'Sunday', sun: false},
+        ];
+
+        var sunnyDays = [];
+
+        for(var i = 0; i < forecast.length; i++){
+            if(forecast[i].sun){
+                sunnyDays.push(forecast[i]);
+            }
+        }
+
+        sunnyDays();
+
+        // then passing to filter method
+        var sunnyDays = forecast.filter(function(weather){
+            return weather.sun;
+        })
+
+        sunnyDays;
+
+
+        var numbers = [5, 10, 15, 20, 25];
+        var triples = numbers.map(function(num){
+            return num * 3;
+        });
+        triples; // [15, 30, 45, 60, 75];
+
+
+////////////// use map twice and add 1 to each internval after that
+        var numbers2 = [2, 4, 6, 8, 10];
+        var quad = numbers2.map(function(mult){
+            return mult * 2;
+        }).map(function(mult){
+            return mult + 1;
+        })
+        quad;
+
+//////////////// change an array of greetings to all upper case words             //////// save the first word in the array to a variable
+        var greeting = ['hi', 'hello', 'hey', 'thanks'];
+
+        var shout = greeting.map(function(salutation){
+            return salutation.toUpperCase();
+        })
+        shout;
+
+///////////////// to change to lower case
+        var greetingLowerCase = shout.map(function(salutation){
+            return salutation.toLowerCase();
+        })
+
+        greetingLowerCase;
+
+//////////////////////
+        var hiShout = shout.shift();
+        hiShout;
+
+
+//////////////REDUCE METHOD applies a function against an accumulator and each value of the array(from left to right) to reduce it to a single value.
+        //example
+        // array.reduce(function(accumulator, currentValue, currentIndex, arr) {}, initalvalue);
+
+
+        var numbers = [1, 2, 3, 4];
+
+        numbers.reduce(function(acc, curr, idx, arr){
+            return acc + curr;
+        }, 5);
+        numbers;
+
+/////////   reducing mutilple arrays within one array
+
+        var multArr = [[0, 1], [2, 3], [4,5]];
+
+        multArr.reduce(function(acc, curr, idx, arr){
+            return acc.concat(curr);
+        }, [-2,-1]);
+
+////////////
+
+        var homeruns = [
+            {batter :12},
+            {batter :21},
+            {batter :28},
+            {batter :42},
+            {batter :31},
+            {batter :22},
+            {batter :17},
+            {batter :16},
+            {batter :5},
+        ];
+
+        var totalHomers = homeruns.reduce(function(a, b){
+            console.log('accumulative ', a, 'current ', b);
+            return a + b.batter;
+        }, 0);
+
+
+/////////////////////////////////////////////
+//// challenge
+////create an array of 5 elements
+//// find the sum, product, and largest value
+
+    var numbers = [5, 10, 15, 20, 25];
+
+
+/////for the sum
+    numbers.reduce(function(x, y){
+        console.log(x,y);
+        return x + y;
+    });
+
+
+////for the product
+    numbers.reduce(function(x, y){
+        return x * y;
+    });
+
+
+///find the largest number in the array
+    var numbers = [10, 5, 20, 25, 15];
+    numbers.reduce(function(acc, curr){
+        if(acc > curr){
+            return acc;
+        } else{
+            return curr;
+        }
+    });
+
+///use map method on all elements of an array
+//use reduce method to return single value of new array
+
+var numbers = [1, 2, 3, 4];
+
+var triples = numbers.map(function(number){
+    return number * 3;
+}).reduce(function(a,b){
+    return a + b;
+}, 0);
+
+//then
+triples;
+
+    </script>
+</body>
+</html>
