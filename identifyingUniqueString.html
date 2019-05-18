@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Identifying Unique String</title>
+</head>
+<body>
+    <script>
+        // pseudo code
+        // function unqiue(string argument)
+        // code block
+        // for loop (statement 1; statement 2; statement 3)
+        // code block
+        // conditional statement (do the first and last index Not match?) end       algorithim with false return 
+        // if loop finsihes with no matches return value of true 
+
+        // declare our function and string parameter to be filled with an arguement
+        function unique(str){
+            // run a loop to iterate through our string by each character
+            for( var i = 0; i < str.length; i++){
+                //check to see if first and last instances of the character is the same
+                // if not true that they are equal return false 
+                if(str.indexOf(str[i]) !== str.lastIndexOf(str[i])) 
+                return false;
+            }
+            // if we make it through the loop without a value of false 
+            return true;
+        }
+
+        ////////////////////////////////////////////
+
+        // declare a function (parameter)
+            //code block
+             // use string method to spilt string into an array of owrds. Store to variable 
+             //declare a variable to store the largest value as we go through our array
+             //create a for loop to go through our array
+             //create a conditional statement comparing words in array
+             // true conditions enter into code block assigning a new value variable storing largest words
+             // when done iterating through array, return the largest value
+             // invoke function (string arguement)
+
+
+             //declare function and parameter
+             function maxWord(str){
+                 //declare varaible and create an array of words with our split method
+                 var words = str.split(' ');
+                 // declare a variable for our longest word.
+                 var biggestWord = 0;
+                 //create a for loop to iterate through array of words
+                 for (var i = 0; i < words.length; i++){
+                    //create a conditional if statement to compare current word length with previous biggest word
+                    if(words[i].length > biggestWord){
+                        biggestWord = words[i].length;
+                    }
+                 }
+                 return biggestWord;
+             }
+            // test
+            maxWord('My favorite day is friday');
+
+
+        ////////////////////////////////////////
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
