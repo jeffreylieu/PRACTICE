@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Permutation of Two Strings</title>
+</head>
+<body>
+    <script>
+            //psuedo code
+            // REMINDER PERMUTATION MEANS THEY HAVE THE SAME NUMBER OF EACH LETTER EVEN THOUGH OUT OF ORDER
+            // function isPermutation(parameter1, parameter2)
+            // code block
+            // use SPLIT SORT JOIN to compare the two strings and return the value
+            // isPermutation(arg1, arg2)
+
+
+            //declare function to find the permutation of the 2 strings
+            function isPermutation(str1, str2){
+                //return the value of comparing two strings using strict equality operator
+                return str1.split('').sort().join('') == str2.split('').sort().join('');
+            }
+
+            isPermutation('volleyball', 'llbyaollve'); //answer should be true
+            
+
+    </script>
+</body>
+</html>
