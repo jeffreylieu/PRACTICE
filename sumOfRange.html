@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Summation of Range</title>
+</head>
+<body>
+    <script>
+        // fund the sum of all numbers in a range of two numbers in an array
+        // largest number may be given first
+        // pause video and attempt pseudo code solution or wait for psuedo code
+
+
+        //PSUEDO CODE ATTEMPT
+        // function sumRange([array of two elements])
+        //     code block
+            // declare and assign values to variables max, min, and total
+                // for loop (initalize counter; test at max value; update)
+                // add current value in for loop to total value 
+            
+            // call function with argument of array with two elements
+
+
+
+        // declare function and give it a parameter of an array
+        function sumRange ( array ){
+            //use Math.max to look at the index of both element and return the largest
+            var max = Math.max(array[0], array[1]);
+             //use Math.min to look at the index of both element and return the smallest
+            var min = Math.min(array[0], array[1]);
+            //declare a variable to hold the running total value
+            var total = 0;
+            // create for loop with counter initialized to min, test of largest value and update
+            for (var i = min; i < max; i++){
+                // add current value in the loop to total value
+                total += i;
+            }
+            // after you have finished for loop, return the value
+            return total;
+        }
+        //call function with example array elements
+        sumRange([1, 4]);
+
+        
+/////////////////////////////////////////////////////////////
+        // another example
+
+        var array = [];
+
+        function range (arr){
+        var lower = Math.min(arr[0],arr[1]);
+        var upper = Math.max(arr[0],arr[1]);
+
+        for (var i=lower;i<=upper;i++){ 
+                array.push(i); 
+            } return array; // return the array to be used in the sum function 
+
+        } 
+        
+        function sum(array){ 
+            var total=0; // need to create a variable outside the loop scope 
+            for(var i in array){ 
+                total=total+array[i]; 
+        } 
+        return total; 
+    } 
+    console.log(sum(range([1,10])));
+        
+
+//////////////////////////////////////////////////////////////
+//another example
+
+    function sum(array) {
+        var accumulator = 0;
+        for (var i = 0; i < array.length; ++i)
+            accumulator += array[i];
+        return accumulator;
+    }
+
+    console.log(sum(range([1, 10])));
+
+
+    </script>
+</body>
+</html>
