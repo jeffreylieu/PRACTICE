@@ -39,6 +39,37 @@ function word(string){
 console.log(word('tacocat'));
 console.log(word('hippopotamus'));
 
+
+//another way
+
+var milkAdd = 'Drink more milk';
+var milkAlt = milkAdd.replace('milk', 'silk');
+milkAlt;
+
+//with regex
+var milkAdd = 'Drink more milk';
+var milkSub = milkAdd.replace(/milk/, 'soy milk');
+milkSub;
+
+
+
+
+//declare a function
+  //function palindrone(string, parameter);
+    //code clock
+      //use regular expression and REPLACE method to get rid of all undesired characters for comparison
+        //reverse our string and return the value of whether our string is equal to our reversed string 
+        // call our function with a string argument
+
+
+        //PSUEDO CODE EXAMPLE
+  function palindrone(str){
+    // take string and remove all non-word characters and turn string into lower case assuming that it is case insensitive
+      str = str.replace(/ \W/g, '').toLowerCase();
+      //put in parentheses to get a boolean value. Split it into an array. reverse the array. join into a string
+        return (str == str.split('').reverse().join(''));
+  }
+  palindrone('race-car');
     </script>
 </body>
 </html>

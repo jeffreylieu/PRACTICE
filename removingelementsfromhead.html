@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Removing Elements from the Head</title>
+</head>
+<body>
+    <script>
+    //declare a function and pass parameters of array and elements to remove
+        function chopper(arr, excess){
+            //apply splice method to array and pass arguments of where to remove from array and how many elements to remove
+            arr.splice(0, excess);
+            //return the value of the mutated array
+            return arr;
+        }
+        //call the function with array argument and elements to be removed 
+        
+        chopper(['jlkjjlkj', 'fjslfjo', 'January', 'Feburary', 'March', 'April', 'May', 'June' , 'July', 'August', 'September', 'October', 'November', 'December'], 2);
+
+        ///'jlkjjlkj', 'fjslfjo' were taken off the fron of the array because we spliced at interval 0 with 2 spaces from the 0 interval
+
+
+
+    </script>
+</body>
+</html>
