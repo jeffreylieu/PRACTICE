@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Let statements</title>
+</head>
+<body>
+    <!-- let is an alternative to var
+    utilizes block scope while var only utilizes function scope
+    this is known as temporal dead zone
+    using the "let" statement should help out code make more sense and out code less buggy -->
+
+    <script>
+        //challenge
+        //create identical set of code and show how 'var' does not take advantage of block scope but 'let' does
+
+        var a = 4;
+        if (true){
+            var b = 5;
+        }
+        console.log(a * b);
+/////////////////////////////////////////////////
+///with let...
+        let a = 3;
+        if(true){
+            let b = 6;
+        }
+
+        console.log(a * b);
+
+
+/////////////////////////////////////////////////
+
+
+function varTest(){
+    var x = 1;
+    if(true){
+        var x = 2;
+        console.log(x);
+    }
+    console.log(x);
+}
+    varTest();
+
+////////////////////////////////////////////////
+//with let
+function varTest(){
+    let x = 1;
+    if(true){
+        let x = 2;
+        console.log(x);
+    }
+    console.log(x);
+}
+varTest();
+
+
+//difference between const, let, var
+
+//const :
+// temperoal dead zone
+// read only
+
+// let :
+// temperoal dead zone
+// read only
+
+// var:
+// reassign value
+
+
+    </script>
+</body>
+</html>
