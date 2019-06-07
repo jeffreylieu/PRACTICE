@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temperate literals and Es6</title>
+</head>
+<body>
+    <script>
+        // ES6 example
+        //variables
+        let topping1 = 'pepperoni';
+        let topping2 = 'mushrooms';
+
+        let pizzaToppings = `My favorite pizza has ${topping1} and ${topping2}!`;
+        // the back ticks `` encompass the temperate literals
+
+
+        pizzaToppings; 
+        //'My favorte pizza has pepperoni and mushrooms!'
+
+
+
+        //////////////////////////////
+
+        //es5 example
+        var pizza = {
+            topping1 = 'pepperoni',
+            topping2 = 'mushrooms',
+            favortePizza: function(){
+                return 'My favorite pizza has ' + this.topping1 + 'and' + this.topping2 + '!';
+             }
+        }
+
+        favortePizza();
+        //'My favorte pizza has pepperoni and mushrooms!'
+
+
+
+        // ES6 example
+        var pizza = {
+        topping1 = 'pepperoni',
+        topping2 = 'mushrooms',
+        favortePizza: function(){
+        return `My favorite pizza has ${topping1} and ${topping2}!`;
+        // added back ticks removed + and dropped in variables in temperate literals
+            }
+        }
+         favortePizza();
+        /// LAB EXCERCISE
+        //REVIEW
+        
+        //PREVIOUSLY CREATED WITH `BACKTICKS` NOT ' ' OR " "
+        //INTERPOLATE VARIABLES WITH ${PLACEHOLDER}
+        //INTERPOLATE ANY KIND OF EXPRESSION
+        // MULTI-LINE
+        // DOESN'T INTERPRET BACK SLASHES
+
+        // challenge create a multi line string
+        // create a multi line string using single or double quptes es5
+        // create a multi line string using temperate literal es6
+
+        var drink = 'coffee';
+        var food = 'donut';
+        var time = 'morning';
+
+        //es5
+        var mashUp = 'John said, ' + '"Good ' + time + '" as he drank his ' + drink + ' and ate his ' + food + '.';
+
+        mashUP;
+
+        //es6 example
+        var drink = 'coffee';
+        var food = 'donut';
+        var time = 'morning';
+
+        var mashUp = `John said, "Good ${time}", as he drank his ${drink} and ate his ${food}.`;
+
+        mashUp;
+
+
+        // var mashUp = {
+        //     drink = 'Coffee',
+        //     food = 'donut',
+        //     time = 'morning',
+        //     newMashup: function(){
+        //         return `John said, "Good ${time}", as he drank his ${drink} and ate his ${food}.`;
+        //     }
+        // }
+        // newMashup();
+       
+    </script>
+</body>
+</html>
