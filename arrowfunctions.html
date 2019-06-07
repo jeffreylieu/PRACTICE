@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>arrow functions</title>
+</head>
+<body>
+    <script>
+        
+        let cubed;
+        //examples of how to return the variable
+        cubed = x => x * x * x; // concise body, implicit return
+        cubed = x => {return x * x * x}; //block body, needs explicit return statment
+        cubed = (x) => x * x * x; //concise body , implicit return
+        cubed = (x) => {return x * x * x}; //concise body , explicit return
+
+/////////////////////////////////////
+        ////// 2 parameters
+        let add;
+        add = (x,y) => x+y;
+        add = (x,y) => {return x + y};
+        add = (x,y,z) => x + y + z;
+
+/////////////////////////////////////
+
+
+//lab examples ES6
+
+        let func2 = () => 'Hi';
+        func2();
+
+
+
+        let func3 = () => {return 'Hola'};
+        func3();
+
+
+        
+/// challemge
+//create two arrow functions
+// no parameters and 2 or more parameters
+// choose either concise or block body
+
+        let es6name = () => 'John'; // no paramters
+        es6name(); // <--implicit return
+
+////////2 parameters
+        let es6mult = (x,y) => x * y;
+        var x = 5;
+        var y = 6;
+
+        es6mult(x,y);
+
+// es5 to es6 map method
+
+        var numbers= [2,4,6,8];
+
+        var es5squared = numbers.map(function(n) {return n * n});
+        es5squared();
+
+// es6 
+
+        var es6squared = numbers.map(n => n*n);
+        es6squared;
+
+
+
+
+
+
+    </script>
+</body>
+</html>
